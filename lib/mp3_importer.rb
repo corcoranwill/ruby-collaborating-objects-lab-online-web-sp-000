@@ -7,7 +7,7 @@ class MP3Importer
   end
 
   # loads all mp3 files in the directory
-  # normalizes the filename to just the mp3 filename with no path 
+  # normalizes the filename to just the mp3 filename with no path
   def files
     @files ||= Dir.glob("#{path}/*.mp3").collect{ |f| f.gsub("#{path}/", "") }
   end
