@@ -13,7 +13,7 @@ class Song
     @@all << self
   end
 
-  # returns all songs 
+  # returns all Song instances  
   def self.all
     @@all
   end
