@@ -30,7 +30,7 @@ class Artist
    self.find(name) ? self.find(name) : self.new(name)
  end
 
- # searches all instance of Artist to see if artist exists 
+ # searches all instance of Artist to see if artist exists
  def self.find(name)
    self.all.find {|artist| artist.name == name }
  end
@@ -40,6 +40,7 @@ class Artist
    @@all << self
  end
 
+ # lists all of the artist's songs 
  def print_songs
    songs.each {|song| puts song.name}
  end
