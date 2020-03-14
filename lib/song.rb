@@ -2,15 +2,18 @@ class Song
   attr_accessor :name, :artist
   @@all = []
 
+  # creates new Song, names, and saves
   def initialize(name)
     @name = name
     save
   end
 
+  # saves all instances into the class variable container
   def save
     @@all << self
   end
 
+  # returns all songs 
   def self.all
     @@all
   end
