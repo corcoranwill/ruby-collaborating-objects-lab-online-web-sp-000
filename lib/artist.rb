@@ -28,6 +28,7 @@ class Artist
    self.all.find {|artist| artist.name == name }
  end
 
+ # saves each artist into the class variable container
  def save
    @@all << self
  end
