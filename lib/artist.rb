@@ -2,6 +2,7 @@ class Artist
  @@all = []
  attr_accessor :name, :songs
 
+ # creates new Artist, names, and saves 
  def initialize(name)
    @name = name
    save
