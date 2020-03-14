@@ -8,6 +8,7 @@ class Artist
    save
  end
 
+ # returns all Artist instances 
  def self.all
    @@all
  end
