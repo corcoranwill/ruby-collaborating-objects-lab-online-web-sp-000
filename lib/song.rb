@@ -13,11 +13,13 @@ class Song
     @@all << self
   end
 
-  # returns all Song instances  
+  # returns all Song instances
   def self.all
     @@all
   end
 
+  # creates a new instance of a Song from the file that's passed
+  # associates new Song instance with the artist from the filename 
   def self.new_by_filename(filename)
     artist, song = filename.split(" - ")
     new_song = self.new(song)
