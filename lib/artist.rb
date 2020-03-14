@@ -13,15 +13,19 @@ class Artist
    @@all
  end
 
- # keeps track of an Artist's Songs 
+ # keeps track of an artist's songs
  def add_song(song)
    song.artist = self
  end
 
+ # lists all songs that belongs to an artist
  def songs
    Song.all.select {|song| song.artist == self}
  end
 
+ # always returns an Artist instance
+ # finds or creates an artist by name maintianing uniqueness of objects by name property
+ # creates new instance of Artist of none exists 
  def self.find_or_create_by_name(name)
    self.find(name) ? self.find(name) : self.new(name)
  end
