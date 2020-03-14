@@ -25,11 +25,12 @@ class Artist
 
  # always returns an Artist instance
  # finds or creates an artist by name maintianing uniqueness of objects by name property
- # creates new instance of Artist of none exists 
+ # creates new instance of Artist of none exists
  def self.find_or_create_by_name(name)
    self.find(name) ? self.find(name) : self.new(name)
  end
 
+ # searches all instance of Artist to see if artist exists 
  def self.find(name)
    self.all.find {|artist| artist.name == name }
  end
