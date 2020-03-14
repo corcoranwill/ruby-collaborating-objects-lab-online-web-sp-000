@@ -8,11 +8,12 @@ class Artist
    save
  end
 
- # returns all Artist instances 
+ # returns all Artist instances
  def self.all
    @@all
  end
 
+ # keeps track of an Artist's Songs 
  def add_song(song)
    song.artist = self
  end
